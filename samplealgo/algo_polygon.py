@@ -10,7 +10,11 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
 NY = 'America/New_York'
-api = tradeapi.REST()
+api = tradeapi.REST(
+    key_id=os.getenv('APCA_API_KEY_ID', 'blabla'),
+    secret_key=os.getenv('APCA_API_SECRET_ID', 'blabla'),
+    base_url='https://paper-api.alpaca.markets'
+)
 
 
 def _dry_run_submit(*args, **kwargs):
