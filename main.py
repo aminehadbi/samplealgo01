@@ -1,5 +1,5 @@
-from samplealgo import algo, btest
+from samplealgo import algo_polygon, btest
 
 if __name__ == '__main__':
     #btest.simulate()
-    algo.main()
+    algo_polygon.main()
